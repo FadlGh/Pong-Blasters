@@ -1,12 +1,14 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class AI : MonoBehaviour
 {
     public GameObject ball;
-    public float paddleSpeed = 5f;
+    public float speed;
 
     private void FixedUpdate()
     {
-        transform.position = new Vector2(transform.position.x, ball.transform.position.y);
+        float newY = Mathf.Lerp(transform.position.y, ball.transform.position.y, speed * Time.deltaTime);
+        transform.position = new Vector2(transform.position.x, newY);
     }
 }

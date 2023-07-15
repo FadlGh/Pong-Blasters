@@ -3,7 +3,7 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    public float speed;
     [SerializeField] private string inputY;
 
     private Rigidbody2D rb;
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         vertical = Input.GetAxis(inputY);
     }
+
     void FixedUpdate()
     {
         rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
