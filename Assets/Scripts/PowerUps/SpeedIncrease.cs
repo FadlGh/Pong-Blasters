@@ -24,7 +24,7 @@ public class SpeedIncrease : PowerUp
     private IEnumerator ReturnDefault(GameObject target)
     {
         GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2f);
         
         if (target.CompareTag("AI"))
         {
