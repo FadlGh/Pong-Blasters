@@ -20,6 +20,6 @@ public class Ball : MonoBehaviour
             lastHitter = collision.gameObject;
         }
 
-        rb.AddForce(Vector2.up * Random.Range(-10, 10));
+        rb.AddForce(Vector2.up * Random.Range(-1, 3), ForceMode2D.Impulse);
     }
 }
