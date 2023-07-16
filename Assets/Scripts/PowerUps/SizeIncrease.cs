@@ -11,7 +11,7 @@ public class SizeIncrease : PowerUp
 
         if (target == null) { return; }
 
-        target.transform.localScale += new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, 0);
+        target.transform.localScale += new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, target.transform.localScale.z);
 
         StartCoroutine(ReturnDefault(target));
     }

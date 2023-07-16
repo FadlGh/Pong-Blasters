@@ -21,7 +21,6 @@ public class BallShrink : PowerUp
         {
             collision.transform.localScale -= new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, 0);
         }
-        collision.transform.localScale -= new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, 0);
 
         Destroy(gameObject);
     }

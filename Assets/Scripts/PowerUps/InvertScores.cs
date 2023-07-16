@@ -1,11 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InvertScores : PowerUp
 {
     protected override void Apply(GameObject collision)
     {
+        GameObject.FindGameObjectWithTag("SM").GetComponent<SceneMaster>().ShowInvertedText();
         GameObject[] ScoreWalls = GameObject.FindGameObjectsWithTag("ScoreWall");
 
         for (int i = 0; i < ScoreWalls.Length; i++)
@@ -27,6 +28,8 @@ public class InvertScores : PowerUp
         {
             ScoreWalls[i].GetComponent<ScoreWall>().isInverted = false;
         }
+
+        GameObject.FindGameObjectWithTag("SM").GetComponent<SceneMaster>().RemoveInvertedText();
 
         Destroy(gameObject);
     }
