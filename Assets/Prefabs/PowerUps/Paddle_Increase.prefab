@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752165082693403192}
   - component: {fileID: 2395795076527237736}
+  - component: {fileID: -1575375519716642412}
   - component: {fileID: 7099024704261219953}
   m_Layer: 0
   m_Name: Paddle_Increase
@@ -85,6 +86,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &-1575375519716642412
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477172789045461170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.04
 --- !u!114 &7099024704261219953
 MonoBehaviour:
   m_ObjectHideFlags: 0

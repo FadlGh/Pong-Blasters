@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037389283185208570}
   - component: {fileID: 6391732895184248643}
+  - component: {fileID: -176182598378245085}
   - component: {fileID: 3316099741594461411}
   m_Layer: 0
   m_Name: Speed_Increase
@@ -85,6 +86,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &-176182598378245085
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511313007776433823}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.045
 --- !u!114 &3316099741594461411
 MonoBehaviour:
   m_ObjectHideFlags: 0
