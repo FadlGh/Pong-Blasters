@@ -8,9 +8,9 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-        if (score > 10)
+        if (score == 10)
         {
-            //win
+            GameObject.FindGameObjectWithTag("SM").GetComponent<SceneMaster>().ShowWinningScreen(gameObject.name);
         }
     }
 }

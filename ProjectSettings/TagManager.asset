@@ -9,6 +9,7 @@ TagManager:
   - ScoreWall
   - ScoresInvertedText
   - SM
+  - AM
   layers:
   - Default
   - TransparentFX
