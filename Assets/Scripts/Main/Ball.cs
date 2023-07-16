@@ -10,7 +10,17 @@ public class Ball : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-4f, 4f);
+        float x = Random.Range(0, 2) == 0 ? -1 : 1;
+        float y = Random.Range(0, 2) == 0 ? -1 : 1;
+        rb.velocity = new Vector2(x  * 4f, y * 4f);
+    }
+
+    void Update()
+    {
+        if (rb.velocity.sqrMagnitude < 2f)
+        {
+            rb.AddForce(Vector2.up * Random.Range(-1, 3), ForceMode2D.Impulse);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

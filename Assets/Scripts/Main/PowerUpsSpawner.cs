@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class PowerUpsSpawner : MonoBehaviour
 {
-    public GameObject[] prefabs;
-    public float spawnInterval = 5f;
-    public float maxX = 5f;
-    public float maxY = 4f;
+    [SerializeField] private GameObject[] prefabs;
+    [SerializeField] private GameObject ball;
+    [SerializeField] private float spawnInterval = 5f;
+    [SerializeField] private float maxX = 5f;
+    [SerializeField] private float maxY = 4f;
 
     private void Start()
     {
         InvokeRepeating("SpawnRandomPrefab", 0f, spawnInterval);
+    }
+
+    void Update()
+    {
+        if (GameObject.FindGameObjectsWithTag("Ball").Length == 0) 
+        {
+            Instantiate(ball, new Vector2(0f ,0f), Quaternion.identity);
+        }
     }
 
     private void SpawnRandomPrefab()

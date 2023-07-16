@@ -9,6 +9,8 @@ public class SpeedIncrease : PowerUp
     {
         GameObject target = collision.GetComponent<Ball>().lastHitter;
 
+        if (target == null ) { return; }
+
         if (target.CompareTag("AI"))
         {
             target.GetComponent<AI>().speed += speedIncreaseFactor;

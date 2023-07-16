@@ -9,6 +9,8 @@ public class SizeIncrease : PowerUp
     {
         GameObject target = collision.GetComponent<Ball>().lastHitter;
 
+        if (target == null) { return; }
+
         target.transform.localScale += new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, 0);
 
         StartCoroutine(ReturnDefault(target));

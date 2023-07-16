@@ -17,7 +17,10 @@ public class BallShrink : PowerUp
     {
         GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(3f);
-
+        if (collision != null) 
+        {
+            collision.transform.localScale -= new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, 0);
+        }
         collision.transform.localScale -= new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, 0);
 
         Destroy(gameObject);
