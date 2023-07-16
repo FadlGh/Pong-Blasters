@@ -17,7 +17,7 @@ public class SizeIncrease : PowerUp
     private IEnumerator ReturnDefault(GameObject target)
     {
         GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         target.transform.localScale -= new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, 0);
 

@@ -16,7 +16,7 @@ public class BallShrink : PowerUp
     private IEnumerator ReturnDefault(GameObject collision)
     {
         GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         collision.transform.localScale -= new Vector3(SizeIncreaseFactor, SizeIncreaseFactor, 0);
 
