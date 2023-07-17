@@ -25,7 +25,8 @@ public class SceneMaster : MonoBehaviour
 
     public void ShowWinningScreen(string winnerName) 
     {
-        winnerText.text = winnerName + "Wins !!";
+        Time.timeScale = 0f;
+        winnerText.text = winnerName + " Wins !!";
         winningScreen.SetActive(true);
     }
 }
